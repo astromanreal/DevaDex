@@ -1,0 +1,301 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Sacred Grove Theme (Default Light) */
+  :root {
+    --background: 120 20% 96%; /* Very light, slightly desaturated green */
+    --foreground: 100 30% 20%; /* Dark, earthy green */
+
+    --muted: 120 20% 88%; /* Lighter, less saturated green */
+    --muted-foreground: 100 30% 40%; /* Darker muted green */
+
+    --popover: 120 20% 98%; /* Slightly off-white green tint */
+    --popover-foreground: 100 30% 20%; /* Dark, earthy green */
+
+    --card: 120 20% 94%; /* Light green for cards */
+    --card-foreground: 100 30% 20%; /* Dark, earthy green */
+
+    --border: 110 20% 80%; /* Earthy green border */
+    --input: 110 20% 85%; /* Slightly lighter green for input */
+
+    --primary: 130 50% 45%; /* Forest Green */
+    --primary-foreground: 130 50% 95%; /* Very light green for text on Primary */
+
+    --secondary: 90 40% 55%; /* Olive Green */
+    --secondary-foreground: 90 40% 95%; /* Very light cream for text on Secondary */
+
+    --accent: 40 60% 60%; /* Soft Gold/Light Brown */
+    --accent-foreground: 40 60% 15%; /* Dark brown for text on Accent */
+
+    --destructive: 0 72% 51%; /* Standard red */
+    --destructive-foreground: 0 0% 98%; /* Light foreground for destructive */
+
+    --ring: 130 50% 50%; /* Forest Green for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors for Sacred Grove */
+    --chart-1: 130 50% 45%; /* Forest Green */
+    --chart-2: 90 40% 55%; /* Olive Green */
+    --chart-3: 40 60% 60%; /* Soft Gold */
+    --chart-4: 130 50% 65%; /* Lighter Forest Green */
+    --chart-5: 90 40% 70%; /* Lighter Olive Green */
+
+    --sidebar-background: 120 20% 92%;
+    --sidebar-foreground: 100 30% 25%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 110 20% 75%;
+    --sidebar-ring: var(--ring);
+  }
+
+  /* Sacred Grove Theme (Default Dark) */
+  .dark {
+    --background: 100 30% 10%; /* Dark, earthy green */
+    --foreground: 120 25% 92%; /* Light, slightly desaturated green text */
+
+    --muted: 100 25% 20%; /* Darker muted green */
+    --muted-foreground: 120 25% 65%; /* Lighter muted green text */
+
+    --popover: 100 30% 8%; /* Very dark green for popovers */
+    --popover-foreground: 120 25% 92%; /* Light green text */
+
+    --card: 100 30% 12%; /* Dark green card background */
+    --card-foreground: 120 25% 92%; /* Light green text */
+
+    --border: 100 25% 25%; /* Dark green border */
+    --input: 100 25% 22%; /* Dark green input background */
+
+    --primary: 130 50% 55%; /* Brighter Forest Green for dark mode */
+    --primary-foreground: 130 50% 15%; /* Dark text for primary */
+
+    --secondary: 90 40% 60%; /* Brighter Olive Green for dark mode */
+    --secondary-foreground: 90 40% 96%; /* Light text for secondary */
+
+    --accent: 40 60% 65%; /* Brighter Soft Gold for dark mode */
+    --accent-foreground: 40 60% 10%; /* Dark text for accent */
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 130 50% 60%;
+
+    /* Chart colors for Sacred Grove Dark */
+    --chart-1: 130 50% 55%;
+    --chart-2: 90 40% 60%;
+    --chart-3: 40 60% 65%;
+    --chart-4: 130 50% 75%;
+    --chart-5: 90 40% 75%;
+
+    --sidebar-background: 100 30% 15%;
+    --sidebar-foreground: 120 25% 88%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 100 25% 30%;
+    --sidebar-ring: var(--ring);
+  }
+
+  /* Cosmic Ocean Theme - Light Mode Overrides */
+  .theme-cosmic-ocean {
+    --background: 210 50% 95%; /* Very light blue */
+    --foreground: 220 60% 15%; /* Deep navy blue */
+    --muted: 210 50% 88%;
+    --muted-foreground: 220 50% 40%;
+    --popover: 210 50% 98%;
+    --popover-foreground: 220 60% 15%;
+    --card: 210 50% 94%;
+    --card-foreground: 220 60% 15%;
+    --border: 210 50% 80%;
+    --input: 210 50% 85%;
+    --primary: 200 70% 50%; /* Celestial Blue */
+    --primary-foreground: 200 70% 95%;
+    --secondary: 240 50% 60%; /* Mystic Purple */
+    --secondary-foreground: 240 50% 95%;
+    --accent: 180 60% 70%; /* Aqua/Teal */
+    --accent-foreground: 180 60% 15%;
+    --ring: 200 70% 55%;
+    --chart-1: 200 70% 50%;
+    --chart-2: 240 50% 60%;
+    --chart-3: 180 60% 70%;
+    --chart-4: 200 70% 65%;
+    --chart-5: 240 50% 75%;
+    --sidebar-background: 210 50% 92%;
+    --sidebar-foreground: 220 60% 25%;
+    --sidebar-border: 210 50% 75%;
+  }
+
+  /* Cosmic Ocean Theme - Dark Mode Overrides */
+  .theme-cosmic-ocean.dark {
+    --background: 220 60% 10%; /* Deep navy blue */
+    --foreground: 210 50% 90%; /* Light sky blue */
+    --muted: 220 50% 20%;
+    --muted-foreground: 210 50% 60%;
+    --popover: 220 60% 8%;
+    --popover-foreground: 210 50% 90%;
+    --card: 220 60% 12%;
+    --card-foreground: 210 50% 90%;
+    --border: 220 50% 25%;
+    --input: 220 50% 22%;
+    --primary: 200 70% 60%; /* Brighter Celestial Blue */
+    --primary-foreground: 200 70% 10%;
+    --secondary: 240 50% 65%; /* Brighter Mystic Purple */
+    --secondary-foreground: 240 50% 96%;
+    --accent: 180 60% 75%; /* Brighter Aqua/Teal */
+    --accent-foreground: 180 60% 10%;
+    --ring: 200 70% 65%;
+    --chart-1: 200 70% 60%;
+    --chart-2: 240 50% 65%;
+    --chart-3: 180 60% 75%;
+    --chart-4: 200 70% 75%;
+    --chart-5: 240 50% 80%;
+    --sidebar-background: 220 60% 15%;
+    --sidebar-foreground: 210 50% 88%;
+    --sidebar-border: 220 50% 30%;
+  }
+
+  /* Sunrise Temple Theme - Light Mode Overrides */
+  .theme-sunrise-temple {
+    --background: 30 100% 97%; /* Very light warm cream */
+    --foreground: 20 50% 25%; /* Warm dark brown */
+    --muted: 30 80% 90%;
+    --muted-foreground: 20 40% 45%;
+    --popover: 30 100% 99%;
+    --popover-foreground: 20 50% 25%;
+    --card: 30 100% 95%;
+    --card-foreground: 20 50% 25%;
+    --border: 30 60% 85%;
+    --input: 30 70% 90%;
+    --primary: 25 80% 55%; /* Terracotta Orange */
+    --primary-foreground: 25 80% 98%;
+    --secondary: 40 90% 60%; /* Golden Yellow */
+    --secondary-foreground: 40 90% 15%;
+    --accent: 10 70% 60%; /* Coral Red */
+    --accent-foreground: 10 70% 98%;
+    --ring: 25 80% 60%;
+    --chart-1: 25 80% 55%;
+    --chart-2: 40 90% 60%;
+    --chart-3: 10 70% 60%;
+    --chart-4: 25 80% 70%;
+    --chart-5: 40 90% 75%;
+    --sidebar-background: 30 100% 94%;
+    --sidebar-foreground: 20 50% 30%;
+    --sidebar-border: 30 60% 80%;
+  }
+
+  /* Sunrise Temple Theme - Dark Mode Overrides */
+  .theme-sunrise-temple.dark {
+    --background: 20 50% 12%; /* Dark warm brown */
+    --foreground: 30 100% 92%; /* Pale warm cream */
+    --muted: 20 40% 22%;
+    --muted-foreground: 30 80% 70%;
+    --popover: 20 50% 10%;
+    --popover-foreground: 30 100% 92%;
+    --card: 20 50% 15%;
+    --card-foreground: 30 100% 92%;
+    --border: 20 40% 30%;
+    --input: 20 40% 25%;
+    --primary: 25 80% 65%; /* Brighter Terracotta */
+    --primary-foreground: 25 80% 10%;
+    --secondary: 40 90% 70%; /* Brighter Golden Yellow */
+    --secondary-foreground: 40 90% 10%;
+    --accent: 10 70% 70%; /* Brighter Coral Red */
+    --accent-foreground: 10 70% 10%;
+    --ring: 25 80% 70%;
+    --chart-1: 25 80% 65%;
+    --chart-2: 40 90% 70%;
+    --chart-3: 10 70% 70%;
+    --chart-4: 25 80% 80%;
+    --chart-5: 40 90% 85%;
+    --sidebar-background: 20 50% 18%;
+    --sidebar-foreground: 30 100% 90%;
+    --sidebar-border: 20 40% 35%;
+  }
+
+  /* Moonlit Austerity Theme - Light Mode Overrides */
+  .theme-moonlit-austerity {
+    --background: 220 20% 98%; /* Almost white, very slight cool tint */
+    --foreground: 210 20% 20%; /* Dark cool gray */
+    --muted: 220 20% 92%;
+    --muted-foreground: 210 20% 45%;
+    --popover: 220 20% 99%;
+    --popover-foreground: 210 20% 20%;
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 210 20% 20%;
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --primary: 210 30% 50%; /* Slate Blue/Gray */
+    --primary-foreground: 210 30% 98%;
+    --secondary: 0 0% 70%; /* Medium Gray */
+    --secondary-foreground: 0 0% 10%;
+    --accent: 200 40% 75%; /* Pale Sky Blue */
+    --accent-foreground: 200 40% 15%;
+    --ring: 210 30% 55%;
+    --chart-1: 210 30% 50%;
+    --chart-2: 0 0% 70%;
+    --chart-3: 200 40% 75%;
+    --chart-4: 210 30% 65%;
+    --chart-5: 0 0% 80%;
+    --sidebar-background: 220 20% 96%;
+    --sidebar-foreground: 210 20% 25%;
+    --sidebar-border: 220 15% 80%;
+  }
+
+  /* Moonlit Austerity Theme - Dark Mode Overrides */
+  .theme-moonlit-austerity.dark {
+    --background: 210 15% 10%; /* Very dark cool gray/charcoal */
+    --foreground: 220 20% 90%; /* Light cool gray */
+    --muted: 210 15% 20%;
+    --muted-foreground: 220 20% 60%;
+    --popover: 210 15% 8%;
+    --popover-foreground: 220 20% 90%;
+    --card: 210 15% 12%; /* Dark Charcoal */
+    --card-foreground: 220 20% 90%;
+    --border: 210 10% 25%;
+    --input: 210 10% 22%;
+    --primary: 210 30% 60%; /* Brighter Slate Blue/Gray */
+    --primary-foreground: 210 30% 10%;
+    --secondary: 0 0% 40%; /* Darker Medium Gray */
+    --secondary-foreground: 0 0% 95%;
+    --accent: 200 40% 65%; /* Slightly Brighter Pale Sky Blue */
+    --accent-foreground: 200 40% 10%;
+    --ring: 210 30% 65%;
+    --chart-1: 210 30% 60%;
+    --chart-2: 0 0% 40%;
+    --chart-3: 200 40% 65%;
+    --chart-4: 210 30% 75%;
+    --chart-5: 0 0% 50%;
+    --sidebar-background: 210 15% 15%;
+    --sidebar-foreground: 220 20% 88%;
+    --sidebar-border: 210 10% 30%;
+  }
+
+  html {
+    font-size: 16px; /* Default base font size. Managed by FontSettingsContext. */
+  }
+  html.font-size-sm {
+    font-size: 14px;
+  }
+  html.font-size-md {
+    font-size: 16px;
+  }
+  html.font-size-lg {
+    font-size: 18px;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Default font family, FontSettingsContext will override via inline style if needed */
+    font-family: var(--font-geist-sans), sans-serif; 
+  }
+}
+
